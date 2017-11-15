@@ -1,11 +1,7 @@
 /*Happy main colors*/
 /*Fonts*/
-@font-face {
-  font-family: "Bebas Neue";
-  src: url(../fonts/BebasNeue.ttf) format("truetype");
-}
 body {
-  font-family: 'Roboto Light', sans-serif;
+  font-family: 'Barlow', sans-serif, sans-serif;
   font-size: 18px;
   font-weight: 100;
   background: #f5f5f5;
@@ -20,7 +16,7 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alex Brush', cursive, sans-serif;
 }
 h2 {
   font-size: 45px;
@@ -92,7 +88,7 @@ hr {
   border-width: 3px;
   border-radius: 0;
   background-color: transparent !important;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alex Brush', cursive, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -128,13 +124,14 @@ hr {
   top: 0;
   left: 0;
 }
-.parallax .content {
-  background-color: rgba(222, 220, 210, 0.5);
+.parallax .information-overlay {
+  background-color: rgba(222, 220, 210, 0.8);
   position: absolute;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
+  display: none;
 }
 .parallax .caption {
   position: absolute;
@@ -156,11 +153,15 @@ hr {
     font-size: 80px !important;
   }
 }
+#page-content {
+  height: 100vh;
+  margin: 0px 50px;
+}
 .about-text .about-subhead {
   line-height: 1px;
   padding: 0px 0px 15px 0px;
   margin-top: -8px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alex Brush', cursive, sans-serif;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: bold;
@@ -294,13 +295,16 @@ hr {
 }
 .gradient-desc .site-description .site-title {
   text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alex Brush', cursive, sans-serif;
   font-size: 35px;
 }
 .gradient-desc .site-description .site-blurb {
   border-top: 1px solid #fff;
   padding: 15px 10px 10px 10px;
   font-size: 13px;
+}
+.page {
+  display: none;
 }
 .modal-body {
   padding: 0px;

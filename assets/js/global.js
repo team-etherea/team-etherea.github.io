@@ -915,18 +915,27 @@ $(".cross").click(function() {
 $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
         var target = $(this.hash);
-        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
         if (target.length) {
-            if ($(window).width() < 768) {
-                $(".cross").click();
+            console.log("hitting here!");
+            $(".cross").click();
+            if (!$(".information-overlay").is(":visible")) {
+                $(".information-overlay").fadeIn("slow");
+                $(".caption").fadeOut("slow");
             }
-            $("html, body").animate({
-                scrollTop: target.offset().top
-            }, 2e3);
+            showOne(target.selector);
             return false;
         }
     }
 });
+
+function showOne(id) {
+    if ($(".page").is(":visible")) {
+        $(".page").not(id).fadeOut("slow");
+        $(id).delay(700).fadeIn("slow");
+    } else {
+        $(id).fadeIn("slow");
+    }
+}
 
 var height = $(".parallax").outerHeight();
 
