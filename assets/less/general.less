@@ -1,0 +1,90 @@
+body {
+  font-family: @mainFace, sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  background: @cream;
+  color: @darkness;
+  overflow-x: hidden;
+}
+
+/* font specifications */
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: @headerFace, sans-serif;
+}
+
+h2 {
+  font-size: 45px;
+
+  &.section-title {
+    color: @teal;
+    text-align: center;
+  }
+}
+
+h3.section-title { color: @teal; }
+
+a, a:hover, a:active {
+  color: @teal;
+}
+
+hr { width: 75%; }
+
+.clear {clear: both;}
+
+/* site bordering */
+#border-top, #border-bottom, #border-left, #border-right {
+  background: @darkness;
+  position: fixed;
+  z-index: 11;
+}
+
+#border-left, #border-right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
+}
+
+#border-left { left: 0; }
+#border-right { right: 0; }
+
+#border-top, #border-bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
+#border-top { top: 0; }
+#border-bottom { bottom: 0; }
+
+/* button changing */
+.btn-xl {
+  padding: 7px 50px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.teal, .hover { color: @teal !important; }
+
+.btn-primary {
+  color: @darkness !important;
+  border-color: @darkness !important;
+  border-width: 3px;
+  border-radius: 0;
+  background-color: transparent !important;
+  font-family: @headerFace, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: @darkness !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 767px) {
+  #content .row {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+}
